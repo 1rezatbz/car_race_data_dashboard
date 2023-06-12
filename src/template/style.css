@@ -1,0 +1,204 @@
+/* Set box-sizing for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Styling for the body element */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 134px;
+  overflow-x: hidden;
+  align-content: center;
+  background-image: url('img/vantage-gt3_02-(large).jpg');
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  margin: 80px;
+}
+
+/* Styling for the form container and results section */
+.form-container, #results {
+  width: 100%;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: relative;
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  background: rgb(135 158 51 / 2%);
+  width: 29%
+}
+
+/* Additional styling for the results section */
+#results {
+  width: 68%;
+  overflow-y: auto;
+  margin-left: 1em;
+}
+
+/* Styling for the container element */
+div#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Styling for the form container heading */
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Styling for the form element */
+.form-container .form {
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Styling for the register form */
+.form-container.register-form {
+  transform: translateX(400px);
+}
+
+/* Styling for the login form */
+.form-container.login-form {
+  transform: translateX(0);
+}
+
+/* Styling for the register form inside the login form */
+.form-container.register-form .login-form {
+  transform: translateX(-400px);
+}
+
+/* Styling for the register form heading */
+.form-container.register-form h2 {
+  margin-bottom: 30px;
+}
+
+/* Styling for input and select elements inside the form container */
+.form-container input[type="text"],
+.form-container select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Styling for the button element inside the form container */
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Styling for the button element on hover */
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the toggle-form class inside the form container */
+.form-container .toggle-form {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  text-decoration: underline;
+  color: #666;
+  cursor: pointer;
+}
+
+/* Styling for the ::after pseudo-element of the body */
+body::after {
+  content: '';
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(92deg, rgb(0 0 0) 0%, rgb(0 0 0 / 65%) 41%, rgba(231, 239, 241, 0) 100%);
+  position: fixed;
+  inset: 0;
+}
+
+/* Styling for the results section */
+#results {
+  color: #fff;
+}
+
+/* Styling for the i element inside the container */
+.container i {
+  position: absolute;
+  border: 2px solid #fff;
+  transition: 0.5s;
+  transform: scale(0.2);
+  top: 170px;
+  left: 50px;
+  width: 550px;
+  height: 550px;
+  opacity: 0.2;
+}
+
+/* Styling for the first i element inside the container */
+.container i:nth-child(1) {
+  border-radius: 66% 34% 67% 33% / 27% 65% 35% 73%;
+  animation: animate 14s linear infinite;
+}
+
+/* Styling for the second i element inside the container */
+.container i:nth-child(2) {
+  border-radius: 53% 47% 53% 47% / 50% 40% 60% 50%;
+  animation: animate 13s linear infinite;
+}
+
+/* Styling for the third i element inside the container */
+.container i:nth-child(3) {
+  border-radius: 41% 59% 43% 57% / 57% 30% 70% 43%;
+  animation: animate 15s linear infinite;
+}
+
+/* Keyframe animation for the rotation of the i elements */
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media query for screens with a maximum width of 960px */
+@media screen and (max-width: 960px) {
+  /* Adjusting the width and margin of the results and form container */
+  #results, .form-container {
+    width: 100%;
+    margin: 0
+  }
+
+  /* Adjusting the margin of the body */
+  body {
+    margin: 32px 64px;
+  }
+
+  /* Adjusting the position of the i elements inside the container */
+  .container i {
+    left: 16%;
+  }
+}

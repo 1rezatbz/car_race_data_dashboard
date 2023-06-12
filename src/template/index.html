@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body class="container">
+<i style="--clr: #00ff0a"></i>
+<i style="--clr: #ff0057"></i>
+<i style="--clr: #fffd44"></i>
+<div id="container">
+  <div class="form-container ">
+    <h2>Query Data Subset Info</h2>
+    <div class="login-form from">
+      <div>
+        <select id="columnname" name="columnname" required name="columnname">
+          <option value="LapDistance">LapDistance</option>
+          <option value="Speed">Speed</option>
+          <option value="LateralAcceleration">LateralAcceleration</option>
+          <option value="LongitudinalAcceleration">LongitudinalAcceleration</option>
+          <option value="FRH">FRH</option>
+          <option value="RRH">RRH</option>
+          <option value="Yaw">Yaw</option>
+          <option value="Steer">Steer</option>
+          <option value="Roll">Roll</option>
+          <option value="FlapAngle">FlapAngle</option>
+          <option value="BrakeForce">BrakeForce</option>
+          <option value="ThrottlePedal">ThrottlePedal</option>
+          <option value="czF">czF</option>
+          <option value="Cx">Cx</option>
+          <option value="CornerPhase">CornerPhase</option>
+          <option value="GPSLatCoord">GPSLatCoord</option>
+          <option value="GPSLongCoord">GPSLongCoord</option>
+        </select>
+      </div>
+      <div>
+        <input type="text" id="start" name="start" placeholder="start time ex.1 " required/>
+      </div>
+      <div>
+        <input type="text" id="end" name="end" placeholder="end time ex.8" required/>
+      </div>
+      <button type="submit" id="subsetbtn">Get Subset</button>
+    </div>
+
+    <div class="register-form from">
+      <h2>Aggregate Statistics</h2>
+
+
+      <div>
+        <select id="aggregate_function" name="aggregate_function" required name="aggregate_function">
+          <option value="AVG">AVG</option>
+          <option value="COUNT">COUNT</option>
+          <option value="SUM">SUM</option>
+          <option value="MAX">MAX</option>
+          <option value="MIN">MIN</option>
+        </select>
+      </div>
+
+      <div>
+        <select id="conditioncolumn" name="condition column" required name="condition column">
+          <option value="LapDistance">LapDistance</option>
+          <option value="Speed">Speed</option>
+          <option value="LateralAcceleration">LateralAcceleration</option>
+          <option value="LongitudinalAcceleration">LongitudinalAcceleration</option>
+          <option value="FRH">FRH</option>
+          <option value="RRH">RRH</option>
+          <option value="Yaw">Yaw</option>
+          <option value="Steer">Steer</option>
+          <option value="Roll">Roll</option>
+          <option value="FlapAngle">FlapAngle</option>
+          <option value="BrakeForce">BrakeForce</option>
+          <option value="ThrottlePedal">ThrottlePedal</option>
+          <option value="czF">czF</option>
+          <option value="Cx">Cx</option>
+          <option value="CornerPhase">CornerPhase</option>
+          <option value="GPSLatCoord">GPSLatCoord</option>
+          <option value="GPSLongCoord">GPSLongCoord</option>
+        </select>
+      </div>
+
+      <div>
+        <input type="text" name="value" id="value" placeholder="Condition Value (eg. 1 or Apex)" style="font-weight: bold;"  required/>
+      </div>
+
+      <div>
+        <select id="stats" name="stats" required name="stats column">
+          <option value="LapDistance">LapDistance</option>
+          <option value="Speed">Speed</option>
+          <option value="LateralAcceleration">LateralAcceleration</option>
+          <option value="LongitudinalAcceleration">LongitudinalAcceleration</option>
+          <option value="FRH">FRH</option>
+          <option value="RRH">RRH</option>
+          <option value="Yaw">Yaw</option>
+          <option value="Steer">Steer</option>
+          <option value="Roll">Roll</option>
+          <option value="FlapAngle">FlapAngle</option>
+          <option value="BrakeForce">BrakeForce</option>
+          <option value="ThrottlePedal">ThrottlePedal</option>
+          <option value="czF">czF</option>
+          <option value="Cx">Cx</option>
+          <option value="CornerPhase">CornerPhase</option>
+          <option value="GPSLatCoord">GPSLatCoord</option>
+          <option value="GPSLongCoord">GPSLongCoord</option>
+        </select>
+      </div>
+
+
+      <button type="submit" id="statsbtn">Get Statistics</button>
+    </div>
+  </div>
+  <div id="results">
+    <h2>Results</h2>
+    <hr>
+    <article id="resultbody"> No Results</article>
+  </div>
+
+</div>
+
+
+</body>
+<script src="script.js" charset="utf-8"></script>
+</html>
