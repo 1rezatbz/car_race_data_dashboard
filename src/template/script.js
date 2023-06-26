@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-  // Get input values from the HTML elements
-  var column = document.getElementById('columnname').value;
-  var start = document.getElementById('start').value;
-  var end = document.getElementById('end').value;
-  var condition = $('#conditioncolumn').val().trim();
-  var value = $('#value').val().trim();
-  var stats = $('#stats').val().trim();
+  // // Get input values from the HTML elements
+  // var column = document.getElementById('columnname').value;
+  // var start = document.getElementById('start').value;
+  // var end = document.getElementById('end').value;
+  // var condition = $('#conditioncolumn').val().trim();
+  // var value = $('#value').val().trim();
+  // var stats = $('#stats').val().trim();
 
   // Subset button click event handler
   $('#subsetbtn').click(function() {
